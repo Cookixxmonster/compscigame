@@ -1,0 +1,127 @@
+﻿[PyScripter]
+Version=2.5.3.0
+
+[Project]
+ClassName=TProjectRootNode
+StoreRelativePaths=TRUE
+ShowFileExtensions=FALSE
+
+[Project\ChildNodes\Node0]
+ClassName=TProjectFilesNode
+
+[Project\ChildNodes\Node0\ChildNodes\Node0]
+ClassName=TProjectFolderNode
+Name=py
+
+[Project\ChildNodes\Node0\ChildNodes\Node0\ChildNodes\Node0]
+ClassName=TProjectFolderNode
+Name=globals
+
+[Project\ChildNodes\Node0\ChildNodes\Node0\ChildNodes\Node0\ChildNodes\Node0]
+ClassName=TProjectFileNode
+FileName=C:\Documents and Settings\Marina.DIC-MUSIC-2\My Documents\Projects\Project1\src\main\py\globals\__init__.py
+
+[Project\ChildNodes\Node0\ChildNodes\Node0\ChildNodes\Node0\ChildNodes\Node1]
+ClassName=TProjectFileNode
+FileName=C:\Documents and Settings\Marina.DIC-MUSIC-2\My Documents\Projects\Project1\src\main\py\globals\globals.py
+
+[Project\ChildNodes\Node0\ChildNodes\Node0\ChildNodes\Node0\ChildNodes]
+Count=2
+
+[Project\ChildNodes\Node0\ChildNodes\Node0\ChildNodes\Node1]
+ClassName=TProjectFolderNode
+Name=movement
+
+[Project\ChildNodes\Node0\ChildNodes\Node0\ChildNodes\Node1\ChildNodes\Node0]
+ClassName=TProjectFileNode
+FileName=C:\Documents and Settings\Marina.DIC-MUSIC-2\My Documents\Projects\Project1\src\main\py\movement\__init__.py
+
+[Project\ChildNodes\Node0\ChildNodes\Node0\ChildNodes\Node1\ChildNodes\Node1]
+ClassName=TProjectFileNode
+FileName=C:\Documents and Settings\Marina.DIC-MUSIC-2\My Documents\Projects\Project1\src\main\py\movement\movement.py
+
+[Project\ChildNodes\Node0\ChildNodes\Node0\ChildNodes\Node1\ChildNodes]
+Count=2
+
+[Project\ChildNodes\Node0\ChildNodes\Node0\ChildNodes\Node2]
+ClassName=TProjectFolderNode
+Name=room
+
+[Project\ChildNodes\Node0\ChildNodes\Node0\ChildNodes\Node2\ChildNodes\Node0]
+ClassName=TProjectFileNode
+FileName=C:\Documents and Settings\Marina.DIC-MUSIC-2\My Documents\Projects\Project1\src\main\py\room\__init__.py
+
+[Project\ChildNodes\Node0\ChildNodes\Node0\ChildNodes\Node2\ChildNodes\Node1]
+ClassName=TProjectFileNode
+FileName=C:\Documents and Settings\Marina.DIC-MUSIC-2\My Documents\Projects\Project1\src\main\py\room\room10Logic.py
+
+[Project\ChildNodes\Node0\ChildNodes\Node0\ChildNodes\Node2\ChildNodes\Node2]
+ClassName=TProjectFileNode
+FileName=C:\Documents and Settings\Marina.DIC-MUSIC-2\My Documents\Projects\Project1\src\main\py\room\room11Logic.py
+
+[Project\ChildNodes\Node0\ChildNodes\Node0\ChildNodes\Node2\ChildNodes\Node3]
+ClassName=TProjectFileNode
+FileName=C:\Documents and Settings\Marina.DIC-MUSIC-2\My Documents\Projects\Project1\src\main\py\room\room1Logic.py
+
+[Project\ChildNodes\Node0\ChildNodes\Node0\ChildNodes\Node2\ChildNodes\Node4]
+ClassName=TProjectFileNode
+FileName=C:\Documents and Settings\Marina.DIC-MUSIC-2\My Documents\Projects\Project1\src\main\py\room\room2Logic.py
+
+[Project\ChildNodes\Node0\ChildNodes\Node0\ChildNodes\Node2\ChildNodes\Node5]
+ClassName=TProjectFileNode
+FileName=C:\Documents and Settings\Marina.DIC-MUSIC-2\My Documents\Projects\Project1\src\main\py\room\room3Logic.py
+
+[Project\ChildNodes\Node0\ChildNodes\Node0\ChildNodes\Node2\ChildNodes\Node6]
+ClassName=TProjectFileNode
+FileName=C:\Documents and Settings\Marina.DIC-MUSIC-2\My Documents\Projects\Project1\src\main\py\room\room4Logic.py
+
+[Project\ChildNodes\Node0\ChildNodes\Node0\ChildNodes\Node2\ChildNodes\Node7]
+ClassName=TProjectFileNode
+FileName=C:\Documents and Settings\Marina.DIC-MUSIC-2\My Documents\Projects\Project1\src\main\py\room\room5Logic.py
+
+[Project\ChildNodes\Node0\ChildNodes\Node0\ChildNodes\Node2\ChildNodes\Node8]
+ClassName=TProjectFileNode
+FileName=C:\Documents and Settings\Marina.DIC-MUSIC-2\My Documents\Projects\Project1\src\main\py\room\room6Logic.py
+
+[Project\ChildNodes\Node0\ChildNodes\Node0\ChildNodes\Node2\ChildNodes\Node9]
+ClassName=TProjectFileNode
+FileName=C:\Documents and Settings\Marina.DIC-MUSIC-2\My Documents\Projects\Project1\src\main\py\room\room7Logic.py
+
+[Project\ChildNodes\Node0\ChildNodes\Node0\ChildNodes\Node2\ChildNodes\Node10]
+ClassName=TProjectFileNode
+FileName=C:\Documents and Settings\Marina.DIC-MUSIC-2\My Documents\Projects\Project1\src\main\py\room\room8Logic.py
+
+[Project\ChildNodes\Node0\ChildNodes\Node0\ChildNodes\Node2\ChildNodes\Node11]
+ClassName=TProjectFileNode
+FileName=C:\Documents and Settings\Marina.DIC-MUSIC-2\My Documents\Projects\Project1\src\main\py\room\room9Logic.py
+
+[Project\ChildNodes\Node0\ChildNodes\Node0\ChildNodes\Node2\ChildNodes\Node12]
+ClassName=TProjectFileNode
+FileName=C:\Documents and Settings\Marina.DIC-MUSIC-2\My Documents\Projects\Project1\src\main\py\room\rooms.py
+
+[Project\ChildNodes\Node0\ChildNodes\Node0\ChildNodes\Node2\ChildNodes]
+Count=13
+
+[Project\ChildNodes\Node0\ChildNodes\Node0\ChildNodes\Node3]
+ClassName=TProjectFileNode
+FileName=C:\Documents and Settings\Marina.DIC-MUSIC-2\My Documents\Projects\Project1\src\main\py\__init__.py
+
+[Project\ChildNodes\Node0\ChildNodes\Node0\ChildNodes\Node4]
+ClassName=TProjectFileNode
+FileName=C:\Documents and Settings\Marina.DIC-MUSIC-2\My Documents\Projects\Project1\src\main\py\main.py
+
+[Project\ChildNodes\Node0\ChildNodes\Node0\ChildNodes]
+Count=5
+
+[Project\ChildNodes\Node0\ChildNodes]
+Count=1
+
+[Project\ChildNodes\Node1]
+ClassName=TProjectRunConfiguationsNode
+
+[Project\ChildNodes]
+Count=2
+
+[Project\ExtraPythonPath]
+Count=0
+
