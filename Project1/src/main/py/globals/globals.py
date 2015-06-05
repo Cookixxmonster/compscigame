@@ -26,3 +26,5 @@ screenHeight=700;
 
 #doors
 doorWidth=50;
+
+defaultSpeed=3;

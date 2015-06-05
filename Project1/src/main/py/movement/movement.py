@@ -34,20 +34,26 @@ Move main character
 '''
 def moveCharacter ():
 
+    roomDef=rooms.getCurrentRoom();
+
+    speed=globals.defaultSpeed;
+    if ('speed' in roomDef):
+        speed = roomDef ['speed'];
+
     lastHitObject = hitObject ();
 
     if (globals.direction == "up"):
         if (not lastHitObject):
-            globals.currentYPos -= 1;
+            globals.currentYPos -= speed;
     elif (globals.direction == "down"):
         if (not lastHitObject):
-            globals.currentYPos += 1;
+            globals.currentYPos += speed;
     elif (globals.direction == "left"):
         if (not lastHitObject):
-            globals.currentXPos -= 1;
+            globals.currentXPos -= speed;
     elif (globals.direction == "right"):
         if (not lastHitObject):
-            globals.currentXPos += 1;
+            globals.currentXPos += speed;
 
     #draw rectangle for now
     pygame.draw.rect(rooms.screen, (255,255,0), (globals.currentXPos,globals.currentYPos, 100, 100), 0)

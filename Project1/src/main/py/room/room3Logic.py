@@ -15,7 +15,7 @@ def roomLogicFunction (object, roomObject) :
 
 #room description
 roomData = {
-    'name':"Room3",
+    'name':"Happy World",
     'startX':50,
     'startY':350,
     'backgroundColor': (0, 155, 225),

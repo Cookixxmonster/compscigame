@@ -15,7 +15,7 @@ def roomLogicFunction (object, roomObject) :
 
 #room description
 roomData = {
-    'name':"Room7",
+    'name':"Choose a sin",
     'startX':50,
     'startY':350,
     'backgroundColor': (0, 155, 225),
@@ -23,33 +23,33 @@ roomData = {
     'objects':[
                {
                 'name':'door',
-                'dimension' : (globals.screenWidth-globals.doorWidth, globals.screenHeight/3 - 100, 50, 150),
+                'dimension' : (globals.screenWidth-globals.doorWidth, globals.screenHeight/3-80 , 50, 150),
                 'shape':'rect',
-                'backgroundColor':(0, 255, 100),
+                'backgroundColor':(255, 0, 0),
                 'toRoom':7,
                 'exitTo':'right'
                },
                {
                 'name':'door',
-                'dimension' : (globals.screenWidth-50, globals.screenHeight/2 - 100, 50, 150),
+                'dimension' : (globals.screenWidth-50, globals.screenHeight/2 + 50, 50, 150),
                 'shape':'rect',
-                'backgroundColor':(0, 255, 100),
+                'backgroundColor':(0, 255, 0),
                 'toRoom':8,
                 'exitTo':'right'
                },
                {
                 'name':'door',
-                'dimension' : (globals.screenWidth-50, globals.screenHeight/2 - 100, 50, 150),
+                'dimension' : (0, globals.screenHeight/3-80 , 50, 150),
                 'shape':'rect',
-                'backgroundColor':(0, 255, 100),
+                'backgroundColor':(0, 0, 255),
                 'toRoom':9,
                 'exitTo':'left'
                },
                {
                 'name':'door',
-                'dimension' : (globals.screenWidth-50, globals.screenHeight/2 - 100, 50, 150),
+                'dimension' : (0, globals.screenHeight/2 + 50, 50, 150),
                 'shape':'rect',
-                'backgroundColor':(0, 255, 100),
+                'backgroundColor':(0, 0, 0),
                 'toRoom':10,
                 'exitTo':'left'
                }

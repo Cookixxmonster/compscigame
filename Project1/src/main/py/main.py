@@ -12,7 +12,7 @@ from movement import movement
 from globals import globals
 
 
-print ("111111111111")
+
 pygame.init();
 
 while (True):

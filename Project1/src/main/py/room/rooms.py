@@ -17,6 +17,8 @@ import room8Logic;
 import room9Logic;
 import room10Logic;
 import room11Logic;
+import room12Logic;
+import room13Logic;
 import rooms
 from globals import globals
 
@@ -37,7 +39,9 @@ roomData= [
    room8Logic.roomData,
    room9Logic.roomData,
    room10Logic.roomData,
-   room11Logic.roomData
+   room11Logic.roomData,
+   room12Logic.roomData,
+   room13Logic.roomData
 
 ]
 
@@ -51,8 +55,12 @@ def drawRoom ():
 
     screen.fill (roomObj ['backgroundColor'])
 
-    #bg = pygame.image.load(r"images\bg_room1.jpg");
-    #screen.blit(bg,(0, 0))
+    if ('backgroundImage' in roomObj):
+        if (not 'backgroundImageLoaded' in roomObj):
+            bg = pygame.image.load(roomObj ['backgroundImage']);
+            roomObj ['backgroundImageLoaded'] = bg;
+
+        screen.blit(roomObj ['backgroundImageLoaded'],(0, 0))
 
     #Room title
     font=pygame.font.SysFont("monospace", 15);

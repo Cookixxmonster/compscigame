@@ -15,26 +15,19 @@ def roomLogicFunction (object, roomObject) :
 
 #room description
 roomData = {
-    'name':"Room9",
+    'name':"Pride",
     'startX':50,
     'startY':350,
     'backgroundColor': (0, 155, 225),
     'roomLogic':roomLogicFunction,
     'objects':[
-               {
-                'name':'door',
-                'dimension' : (0, globals.screenHeight/2 - 100, 50, 150),
-                'shape':'rect',
-                'backgroundColor':(0, 255, 100),
-                'toRoom':7,
-                'exitTo':'left'
-               },
+
                {
                 'name':'door',
                 'dimension' : (globals.screenWidth-50, globals.screenHeight/2 - 100, 50, 150),
                 'shape':'rect',
                 'backgroundColor':(0, 255, 100),
-                'toRoom':9,
+                'toRoom':11,
                 'exitTo':'right'
                }
     ]
