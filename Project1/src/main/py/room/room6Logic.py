@@ -19,21 +19,23 @@ roomData = {
     'startX':50,
     'startY':350,
     'backgroundColor': (0, 155, 225),
+    'backgroundImage' : 'images/Hallway Door.jpg',
+    'speed':5,
     'roomLogic':roomLogicFunction,
     'objects':[
                {
                 'name':'door',
-                'dimension' : (0, globals.screenHeight/2 - 100, 50, 150),
+                'dimension' : (globals.screenWidth/2 - 50, globals.screenHeight-50, 150, 150),
                 'shape':'rect',
                 'backgroundColor':(0, 255, 100),
                 'toRoom':4,
-                'exitTo':'left'
+                'exitTo':'down'
                },
                {
                 'name':'door',
-                'dimension' : (globals.screenWidth/2 - 50, 0, 150, 50),
+                'dimension' : (globals.screenWidth/2 - 110, globals.screenHeight/2, 220, 50),
                 'shape':'rect',
-                'backgroundColor':(0, 255, 100),
+                'backgroundColor':(255, 0, 100),
                 'toRoom':6,
                 'exitTo':'up'
                }

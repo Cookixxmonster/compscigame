@@ -60,7 +60,7 @@ def drawRoom ():
             bg = pygame.image.load(roomObj ['backgroundImage']);
             roomObj ['backgroundImageLoaded'] = bg;
 
-        screen.blit(roomObj ['backgroundImageLoaded'],(0, 0))
+        screen.blit(roomObj ['backgroundImageLoaded'],(0, 0));
 
     #Room title
     font=pygame.font.SysFont("monospace", 15);

@@ -18,7 +18,7 @@ roomData = {
     'name':"Go into Machine",
     'startX':50,
     'startY':350,
-    'backgroundColor': (0, 155, 225),
+    'backgroundColor': (255, 255, 255),
     'roomLogic':roomLogicFunction,
     'objects':[
                #define borders
@@ -48,7 +48,7 @@ roomData = {
                },
                {
                 'name':'door',
-                'dimension' : (0, globals.screenHeight/2 - 100, 50, 150),
+                'dimension' : (0, globals.screenHeight-150, 50, 150),
                 'shape':'rect',
                 'backgroundColor':(0, 255, 100),
                 'toRoom':0,
@@ -56,7 +56,7 @@ roomData = {
                },
                {
                 'name':'door',
-                'dimension' : (globals.screenWidth-50, globals.screenHeight/2 - 100, 50, 150),
+                'dimension' : (globals.screenWidth-50, globals.screenHeight - 150, 50, 150),
                 'shape':'rect',
                 'backgroundColor':(0, 255, 100),
                 'toRoom':2,

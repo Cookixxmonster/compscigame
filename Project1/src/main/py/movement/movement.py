@@ -7,6 +7,28 @@ Created on Jun 1, 2015
 import pygame.key;
 from globals import globals
 from room import rooms
+
+
+
+currentDudeImage = 0;
+currentDudeImageDelta = 0;
+
+dudeImages = [
+    pygame.image.load('images/move/tmp-0.png'),
+    pygame.image.load('images/move/tmp-1.png'),
+    pygame.image.load('images/move/tmp-2.png'),
+    pygame.image.load('images/move/tmp-3.png'),
+    pygame.image.load('images/move/tmp-4.png'),
+    pygame.image.load('images/move/tmp-5.png'),
+    pygame.image.load('images/move/tmp-6.png'),
+    pygame.image.load('images/move/tmp-7.png'),
+    pygame.image.load('images/move/tmp-8.png'),
+    pygame.image.load('images/move/tmp-9.png'),
+    pygame.image.load('images/move/tmp-10.png'),
+    pygame.image.load('images/move/tmp-11.png')
+]
+
+
 '''
 Process keyboard events
 '''
@@ -34,6 +56,8 @@ Move main character
 '''
 def moveCharacter ():
 
+    global currentDudeImageDelta, currentDudeImage;
+
     roomDef=rooms.getCurrentRoom();
 
     speed=globals.defaultSpeed;
@@ -56,7 +80,17 @@ def moveCharacter ():
             globals.currentXPos += speed;
 
     #draw rectangle for now
-    pygame.draw.rect(rooms.screen, (255,255,0), (globals.currentXPos,globals.currentYPos, 100, 100), 0)
+    #pygame.draw.rect(rooms.screen, (255,255,0), (globals.currentXPos,globals.currentYPos, 100, 100), 0)
+    rooms.screen.blit(dudeImages [currentDudeImage],(globals.currentXPos,globals.currentYPos));
+    currentDudeImageDelta += 1;
+
+
+    if (currentDudeImageDelta > 3):
+        currentDudeImageDelta = 0;
+        currentDudeImage += 1;
+        if (currentDudeImage > 10):
+            currentDudeImage = 0;
+
 
     #call room logic if any
     if (lastHitObject):
