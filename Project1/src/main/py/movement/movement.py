@@ -32,6 +32,17 @@ dudeImages = [
 '''
 Process keyboard events
 '''
+def processMouse (event):
+    print (event);
+    
+    #call room logic if any
+    roomDef=rooms.getCurrentRoom();
+    if ('roomLogic' in roomDef):
+        roomDef['roomLogic'] (event, rooms.getCurrentRoom ());
+
+'''
+Process keyboard events
+'''
 def processInput (event):
     #print (event);
 
@@ -81,7 +92,7 @@ def moveCharacter ():
 
     #draw rectangle for now
     #pygame.draw.rect(rooms.screen, (255,255,0), (globals.currentXPos,globals.currentYPos, 100, 100), 0)
-    rooms.screen.blit(dudeImages [currentDudeImage],(globals.currentXPos,globals.currentYPos));
+    globals.screen.blit(dudeImages [currentDudeImage],(globals.currentXPos,globals.currentYPos));
     currentDudeImageDelta += 1;
 
 

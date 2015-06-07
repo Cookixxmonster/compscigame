@@ -11,8 +11,6 @@ from room import rooms
 from movement import movement
 from globals import globals
 
-
-
 pygame.init();
 
 while (True):
@@ -26,6 +24,9 @@ while (True):
         #process keyboard input
         if event.type == pygame.KEYDOWN:
             movement.processInput (event);
+
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            movement.processMouse (event);
 
     #draw room
     rooms.drawRoom ();

@@ -6,11 +6,11 @@ Created on Jun 3, 2015
 
 from globals import globals
 import pygame;
-import rooms
-
+from pygame.event import Event
 
 currentDancersImage = 0;
 currentDancersImageDelta = 0;
+
 
 dancersImages = [
     pygame.image.load('images/Dancing people/tmp-0.png'),
@@ -54,17 +54,30 @@ dancersImages = [
 ]
 
 
-
+'''
+This method changes coordinates to make door visible
+when the key has been clicked
+'''
+def openDoor ():
+    global roomData;
+    roomData ['objects'][6]['dimension']= (0, globals.screenHeight/2 - 100, 50, 150);
+    roomData ['objects'][5]['text']= "Very good. You may proceed now";
+    
+    #hide the key
+    roomData ['objects'][4]['dimension']= (-525, 400, 50, 50);
+    
+    
 '''
 Logic pertaining to various events in room11
 '''
 def roomLogicFunction (object, roomObject) :
 
+    #draw dancers
     global dancersImages, currentDancersImageDelta, currentDancersImage;
 
-    rooms.screen.blit(dancersImages [currentDancersImage],(0,-50));
+    globals.screen.blit(dancersImages [currentDancersImage],(0,-50));
 
-    rooms.screen.blit(dancersImages [currentDancersImage],(450,150));
+    globals.screen.blit(dancersImages [currentDancersImage],(450,150));
     currentDancersImageDelta += 1;
 
 
@@ -75,9 +88,26 @@ def roomLogicFunction (object, roomObject) :
             currentDancersImage = 0;
 
 
+    #check if mouse clicked
+    #TODO - better handling
+    try:
+        if (object.type and object.pos):
+
+            #mouse click position
+            #'dimension' : (525, 400, 50, 50),
+            pos = object.pos;
+            x = pos[0];
+            y = pos [1];
+            print ("DDDDDDDDDD:", pos)
+            
+            if (x > 525 and x < 525 + 50 and y > 400 and y < 400 + 50):
+                openDoor ();
+    except:
+        pass;
+
 #room description
 roomData = {
-    'name':"Lust",
+    'name':"",
     'startX':50,
     'startY':350,
     'backgroundColor': (0, 155, 225),
@@ -109,13 +139,27 @@ roomData = {
                 'shape':'rect',
                 'backgroundColor':(0, 0, 0)
                },
-
+               {
+                'name':'key image',
+                'dimension' : (525, 400, 50, 50),
+                'shape':'image',
+                'data':pygame.image.load('images/room11/key.png')
+               },
+               {
+                'name':'information label',
+                'text' : 'Welcome to Lust Room, find a key to exit it. Or die trying. Ha ha.',
+                'size':15,
+                'dimension' : (20, 15, 0, 0),
+                'shape':'label',
+                'color': (255,255,255),
+                'backgroundColor':(0, 0, 0)
+               },
                {
                 'name':'door',
-                'dimension' : (0, globals.screenHeight/2 - 100, 50, 150),
+                'dimension' : (-100, globals.screenHeight/2 - 100, 50, 150),
                 'shape':'rect',
                 'backgroundColor':(0, 255, 100),
-                'toRoom':12,
+                'toRoom':11,
                 'exitTo':'left'
                }
     ]

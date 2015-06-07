@@ -6,25 +6,24 @@ Created on Jun 1, 2015
 
 import pygame;
 
-import room1Logic;
-import room2Logic;
-import room3Logic;
-import room4Logic;
-import room5Logic;
-import room6Logic;
-import room7Logic;
-import room8Logic;
-import room9Logic;
-import room10Logic;
-import room11Logic;
-import room12Logic;
-import room13Logic;
-import rooms
+from room import room1Logic;
+from room import room2Logic;
+from room import room3Logic;
+from room import room4Logic;
+from room import room5Logic;
+from room import room6Logic;
+from room import room7Logic;
+from room import room8Logic;
+from room import room9Logic;
+from room import room10Logic;
+from room import room11Logic;
+from room import room12Logic;
+from room import room13Logic;
 from globals import globals
 
 
 #define screen
-screen = pygame.display.set_mode((globals.screenWidth, globals.screenHeight));
+globals.screen = pygame.display.set_mode((globals.screenWidth, globals.screenHeight));
 pygame.display.set_caption ("Welcome to the Game")
 
 #list of all rooms data
@@ -53,23 +52,23 @@ def drawRoom ():
 
     roomObj=roomData [globals.currentRoom];
 
-    screen.fill (roomObj ['backgroundColor'])
+    globals.screen.fill (roomObj ['backgroundColor'])
 
     if ('backgroundImage' in roomObj):
         if (not 'backgroundImageLoaded' in roomObj):
             bg = pygame.image.load(roomObj ['backgroundImage']);
             roomObj ['backgroundImageLoaded'] = bg;
 
-        screen.blit(roomObj ['backgroundImageLoaded'],(0, 0));
+        globals.screen.blit(roomObj ['backgroundImageLoaded'],(0, 0));
 
     #Room title
     font=pygame.font.SysFont("monospace", 15);
     label = font.render(roomObj['name'], 1, (0,0,0))
-    screen.blit(label, (400, 10))
+    globals.screen.blit(label, (400, 10))
 
     #Room objects
     for object in roomObj['objects']:
-        drawObject (screen, object);
+        drawObject (globals.screen, object);
 
 
 '''
@@ -83,6 +82,14 @@ def drawObject (screen, object):
     #for different shape types draw different shapes
     if (shape == 'rect'):
         pygame.draw.rect(screen, object['backgroundColor'], object ['dimension'], 0)
+
+    if (shape == 'label'):
+        font=pygame.font.SysFont("monospace", object['size'], 700);
+        label = font.render(object['text'], 10, object['color'])
+        globals.screen.blit(label, (object ['dimension'] [0], object ['dimension'][1]))
+
+    if (shape == 'image'):
+        globals.screen.blit (object ['data'], (object ['dimension'] [0], object ['dimension'][1]));
 
 
 '''
