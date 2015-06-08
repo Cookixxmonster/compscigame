@@ -23,8 +23,6 @@ def roomLogicFunction (object, roomObject) :
 roomData = {
     'name':"Intro",
     'backgroundColor': (169, 207, 235),
-    'startX':550,
-    'startY':550,
     'roomLogic':roomLogicFunction,
     'objects':[
                #define borders

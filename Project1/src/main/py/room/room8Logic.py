@@ -17,8 +17,6 @@ def roomLogicFunction (object, roomObject) :
 roomData = {
     'name':"Gluttony",
     'speed':6,
-    'startX':50,
-    'startY':350,
     'backgroundColor': (0, 155, 225),
     'backgroundImage' : 'images/Gluttony.jpg',
     'roomLogic':roomLogicFunction,

@@ -16,8 +16,6 @@ def roomLogicFunction (object, roomObject) :
 #room description
 roomData = {
     'name':"Fight Room",
-    'startX':50,
-    'startY':350,
     'backgroundColor': (0, 155, 225),
     'roomLogic':roomLogicFunction,
     'objects':[

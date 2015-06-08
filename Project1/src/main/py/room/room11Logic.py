@@ -62,11 +62,11 @@ def openDoor ():
     global roomData;
     roomData ['objects'][6]['dimension']= (0, globals.screenHeight/2 - 100, 50, 150);
     roomData ['objects'][5]['text']= "Very good. You may proceed now";
-    
+
     #hide the key
     roomData ['objects'][4]['dimension']= (-525, 400, 50, 50);
-    
-    
+
+
 '''
 Logic pertaining to various events in room11
 '''
@@ -99,7 +99,7 @@ def roomLogicFunction (object, roomObject) :
             x = pos[0];
             y = pos [1];
             print ("DDDDDDDDDD:", pos)
-            
+
             if (x > 525 and x < 525 + 50 and y > 400 and y < 400 + 50):
                 openDoor ();
     except:
@@ -108,8 +108,6 @@ def roomLogicFunction (object, roomObject) :
 #room description
 roomData = {
     'name':"",
-    'startX':50,
-    'startY':350,
     'backgroundColor': (0, 155, 225),
     'backgroundImage' : 'images/Lust.jpg',
     'roomLogic':roomLogicFunction,

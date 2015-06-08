@@ -14,18 +14,18 @@ currentDudeImage = 0;
 currentDudeImageDelta = 0;
 
 dudeImages = [
-    pygame.image.load('images/move/tmp-0.png'),
-    pygame.image.load('images/move/tmp-1.png'),
-    pygame.image.load('images/move/tmp-2.png'),
-    pygame.image.load('images/move/tmp-3.png'),
-    pygame.image.load('images/move/tmp-4.png'),
-    pygame.image.load('images/move/tmp-5.png'),
-    pygame.image.load('images/move/tmp-6.png'),
-    pygame.image.load('images/move/tmp-7.png'),
-    pygame.image.load('images/move/tmp-8.png'),
-    pygame.image.load('images/move/tmp-9.png'),
-    pygame.image.load('images/move/tmp-10.png'),
-    pygame.image.load('images/move/tmp-11.png')
+    pygame.image.load('images/move/tmp-01.png'),
+    pygame.image.load('images/move/tmp-110.png'),
+    pygame.image.load('images/move/tmp-21.png'),
+    pygame.image.load('images/move/tmp-31.png'),
+    pygame.image.load('images/move/tmp-41.png'),
+    pygame.image.load('images/move/tmp-51.png'),
+    pygame.image.load('images/move/tmp-61.png'),
+    pygame.image.load('images/move/tmp-71.png'),
+    pygame.image.load('images/move/tmp-81.png'),
+    pygame.image.load('images/move/tmp-91.png'),
+    pygame.image.load('images/move/tmp-101.png'),
+    pygame.image.load('images/move/tmp-111.png')
 ]
 
 
@@ -34,7 +34,7 @@ Process keyboard events
 '''
 def processMouse (event):
     print (event);
-    
+
     #call room logic if any
     roomDef=rooms.getCurrentRoom();
     if ('roomLogic' in roomDef):
@@ -126,6 +126,15 @@ def moveCharacter ():
                 globals.currentYPos=globals.screenHeight - 150;
             elif (globals.direction=="down"):
                 globals.currentYPos=50;
+
+
+            #it coule be overridden in room data
+            if ('startX' in roomDef):
+                globals.currentXPos=roomDef ['startX'];
+            if ('startY' in roomDef):
+                globals.currentYPos=roomDef ['startY'];
+            if ('startMovement' in roomDef):
+                globals.direction=roomDef ['startMovement'];
 
             print ("Got to another room !!!", globals.currentRoom);
 

@@ -16,8 +16,6 @@ def roomLogicFunction (object, roomObject) :
 #room description
 roomData = {
     'name':"Go into Machine",
-    'startX':50,
-    'startY':350,
     'backgroundColor': (255, 255, 255),
     'roomLogic':roomLogicFunction,
     'objects':[
