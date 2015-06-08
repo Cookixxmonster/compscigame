@@ -40,7 +40,7 @@ roomData = {
                },
                {
                 'name':'topwall',
-                'dimension' : (0, 0, globals.screenWidth, 2),
+                'dimension' : (0, 0, globals.screenWidth, 12),
                 'shape':'rect',
                 'backgroundColor':(0, 0, 255)
                },

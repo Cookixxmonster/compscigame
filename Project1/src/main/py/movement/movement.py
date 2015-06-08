@@ -158,23 +158,23 @@ def hitObject ():
 
         if (globals.direction == "up"):
             #test upper side
-            for testX in range (globals.currentXPos, globals.currentXPos + 100):
+            for testX in range (globals.currentXPos, globals.currentXPos + 150):
                 if (testX >= x and testX <= x + width and globals.currentYPos - delta > y  and globals.currentYPos - delta < y + height):
                     return roomObject;
         elif (globals.direction == "right"):
             #test right side
-            for testY in range (globals.currentYPos, globals.currentYPos + 100):
-                if (globals.currentXPos + 100 >= x and globals.currentXPos + 100 <= x + width and testY >= y and testY <= y + height):
+            for testY in range (globals.currentYPos, globals.currentYPos + 150):
+                if (globals.currentXPos + 150 >= x and globals.currentXPos + 150 <= x + width and testY >= y and testY <= y + height):
                     return roomObject;
         elif (globals.direction == "left"):
             #test left side
-            for testY in range (globals.currentYPos, globals.currentYPos + 100):
+            for testY in range (globals.currentYPos, globals.currentYPos + 150):
                 if (globals.currentXPos - delta >= x and globals.currentXPos - delta <= x + width and testY >= y and testY <= y + height):
                     return roomObject;
         elif (globals.direction == "down"):
             #test bottom side
-            for testX in range (globals.currentXPos, globals.currentXPos + 100):
-                if (testX >= x and testX <= x + width and globals.currentYPos + 100 >= y and globals.currentYPos + 100 <= y + height):
+            for testX in range (globals.currentXPos, globals.currentXPos + 150):
+                if (testX >= x and testX <= x + width and globals.currentYPos + 150 >= y and globals.currentYPos + 100 <= y + height):
                     return roomObject;
 
     return False;
