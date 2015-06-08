@@ -67,7 +67,8 @@ Move main character
 '''
 def moveCharacter ():
 
-    print ("X/Y:", globals.currentXPos, globals.currentYPos);
+    #print ("X/Y:", globals.currentXPos, globals.currentYPos);
+    
     global currentDudeImageDelta, currentDudeImage;
 
     roomDef=rooms.getCurrentRoom();

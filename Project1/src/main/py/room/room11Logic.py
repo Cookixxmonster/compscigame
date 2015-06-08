@@ -89,7 +89,6 @@ def roomLogicFunction (object, roomObject) :
 
 
     #check if mouse clicked
-    #TODO - better handling
     try:
         if (object.type and object.pos):
 
