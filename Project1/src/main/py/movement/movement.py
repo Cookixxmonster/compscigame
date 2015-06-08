@@ -67,6 +67,7 @@ Move main character
 '''
 def moveCharacter ():
 
+    print ("X/Y:", globals.currentXPos, globals.currentYPos);
     global currentDudeImageDelta, currentDudeImage;
 
     roomDef=rooms.getCurrentRoom();
@@ -148,7 +149,9 @@ Check if the main character can move further
 def hitObject ():
     roomDef=rooms.getCurrentRoom();
     roomObjects=roomDef['objects'];
-    delta = 2;
+    delta = 5;
+
+    testValue=155;
 
     for roomObject in roomObjects:
         #print (roomObject);
@@ -158,23 +161,23 @@ def hitObject ():
 
         if (globals.direction == "up"):
             #test upper side
-            for testX in range (globals.currentXPos, globals.currentXPos + 150):
+            for testX in range (globals.currentXPos, globals.currentXPos + testValue):
                 if (testX >= x and testX <= x + width and globals.currentYPos - delta > y  and globals.currentYPos - delta < y + height):
                     return roomObject;
         elif (globals.direction == "right"):
             #test right side
-            for testY in range (globals.currentYPos, globals.currentYPos + 150):
-                if (globals.currentXPos + 150 >= x and globals.currentXPos + 150 <= x + width and testY >= y and testY <= y + height):
+            for testY in range (globals.currentYPos, globals.currentYPos + testValue):
+                if (globals.currentXPos + testValue >= x and globals.currentXPos + testValue <= x + width and testY >= y and testY <= y + height):
                     return roomObject;
         elif (globals.direction == "left"):
             #test left side
-            for testY in range (globals.currentYPos, globals.currentYPos + 150):
+            for testY in range (globals.currentYPos, globals.currentYPos + testValue):
                 if (globals.currentXPos - delta >= x and globals.currentXPos - delta <= x + width and testY >= y and testY <= y + height):
                     return roomObject;
         elif (globals.direction == "down"):
             #test bottom side
-            for testX in range (globals.currentXPos, globals.currentXPos + 150):
-                if (testX >= x and testX <= x + width and globals.currentYPos + 150 >= y and globals.currentYPos + 100 <= y + height):
+            for testX in range (globals.currentXPos, globals.currentXPos + testValue):
+                if (testX >= x and testX <= x + width and globals.currentYPos + testValue >= y and globals.currentYPos + testValue <= y + height):
                     return roomObject;
 
     return False;

@@ -7,7 +7,7 @@ Created on Jun 1, 2015
 import pygame;
 
 currentXPos = 550;
-currentYPos = 550;
+currentYPos = 540;
 direction='none'
 
 #colors
