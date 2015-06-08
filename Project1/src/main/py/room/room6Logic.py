@@ -16,7 +16,7 @@ def roomLogicFunction (object, roomObject) :
 #room description
 roomData = {
     'name':"Door To Hallway",
-    'startX':globals.screenWidth/2 - 50,
+    'startX':400,
     'startY':globals.screenHeight - 200,
     'startMovement':'stand',
     'backgroundColor': (0, 155, 225),
