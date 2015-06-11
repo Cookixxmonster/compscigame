@@ -5,12 +5,53 @@ Created on Jun 3, 2015
 '''
 
 from globals import globals
+import pygame;
 
-'''
-Logic pertaining to various events in room11
-'''
+
+currentchestImage = 0;
+currentchestImageDelta = 0;
+
+
+chestImages = [
+    pygame.image.load('images/chest/chest-0.png'),
+    pygame.image.load('images/chest/chest-1.png'),
+    pygame.image.load('images/chest/chest-2.png'),
+    pygame.image.load('images/chest/chest-3.png'),
+    pygame.image.load('images/chest/chest-4.png'),
+    pygame.image.load('images/chest/chest-5.png'),
+    pygame.image.load('images/chest/chest-6.png'),
+    pygame.image.load('images/chest/chest-7.png'),
+    pygame.image.load('images/chest/chest-8.png'),
+    pygame.image.load('images/chest/chest-9.png'),
+    pygame.image.load('images/chest/chest-10.png'),
+    pygame.image.load('images/chest/chest-11.png'),
+    pygame.image.load('images/chest/chest-12.png'),
+    pygame.image.load('images/chest/chest-13.png'),
+    pygame.image.load('images/chest/chest-14.png'),
+    pygame.image.load('images/chest/chest-15.png'),
+    pygame.image.load('images/chest/chest-16.png'),
+    pygame.image.load('images/chest/chest-17.png')
+]
+
 def roomLogicFunction (object, roomObject) :
-    return 0;
+
+    #draw chest
+    global chest, currentchestImageDelta, currentchestImage;
+
+    globals.screen.blit(chestImages [currentchestImage],(450,150));
+
+    currentchestImageDelta += 1;
+
+
+    if (currentchestImageDelta > 15):
+        currentchestImageDelta = 0;
+
+        if (currentchestImage < len (chestImages) - 1):
+            currentchestImage += 1;
+
+
+    print ("DDDDDDDDDD", currentchestImage)
+
 
 
 #room description

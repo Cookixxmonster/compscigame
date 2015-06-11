@@ -19,13 +19,14 @@ roomData = {
     'backgroundColor': (0, 155, 225),
     'roomLogic':roomLogicFunction,
     'objects':[
-               {
+              {
                 'name':'door',
-                'dimension' : (0, globals.screenHeight/2 - 100, 50, 150),
+                'dimension' : (globals.screenWidth - 50, globals.screenHeight/2 - 100, 50, 150),
                 'shape':'rect',
                 'backgroundColor':(0, 255, 100),
-                'toRoom':9,
-                'exitTo':'left'
+                'toRoom':12,
+                'exitTo':'right'
                }
+
     ]
 }
