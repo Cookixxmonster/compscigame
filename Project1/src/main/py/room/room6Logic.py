@@ -27,7 +27,7 @@ roomData = {
                {
                 'name':'door',
                 'dimension' : (globals.screenWidth/2 - 50, globals.screenHeight-50, 150, 150),
-                'shape':'rect',
+                'shape':'door',
                 'backgroundColor':(0, 255, 100),
                 'toRoom':4,
                 'exitTo':'down'
@@ -35,7 +35,7 @@ roomData = {
                {
                 'name':'door',
                 'dimension' : (globals.screenWidth/2 - 110, globals.screenHeight/2, 220, 50),
-                'shape':'rect',
+                'shape':'door',
                 'backgroundColor':(255, 0, 100),
                 'toRoom':6,
                 'exitTo':'up'
