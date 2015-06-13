@@ -96,7 +96,6 @@ check if collided with any spider
 '''
 def collidedWithSpiders ():
     
-    #reuse this method
     x = globals.currentXPos;
     y =  globals.currentYPos;
     

@@ -10,8 +10,14 @@ import pygame;
 
 currentBananaImage = 0;
 currentBananaImageSpeed = 0;
-banana_approached = 
+bananaApproached = False; 
 
+bubbleImage=pygame.image.load('images/room3/Textbubble.png');
+bananaPosition = (450,350);
+bananaBubblePosition = (550,300);
+bananaBananaMessagePosition = (550,300);
+bananaBananaMessages=["Would you like some grits?"];
+bananaBananaCurrentMessage = 0;
 
 BananaImages = [
     pygame.image.load('images/Banana/tmp-0.png'),
@@ -26,30 +32,60 @@ BananaImages = [
 ]
 
 '''
+Return True if walking person is close to the banana
+'''
+def isPersonCloseToBanana ():
+    
+    global bananaPosition;
+    
+    x = globals.currentXPos;
+    y =  globals.currentYPos;
+    
+    #that's where the babana is
+    rect = pygame.Rect (bananaPosition [0], bananaPosition [1], 350, 350);
+    
+    #check each point in the square when the walking man is
+    for i in range (x, x + 100):
+        for j in range (y, y + 100):
+            if (rect.collidepoint (i, j)):
+                return True;
+    
+
+
+'''
 Logic pertaining to various events in room3
 '''
 def roomLogicFunction (object, roomObject) :
 
-    #draw Banana
-    global Banana, currentBananaImageSpeed, currentBananaImage;
+    global currentBananaImageSpeed, currentBananaImage;
+    global bananaApproached, bubbleImage, bananaPosition;
+    global bananaBananaMessagePosition, bananaBananaMessages, bananaBananaCurrentMessage
 
-    globals.screen.blit(BananaImages [currentBananaImage],(450,350));
+    globals.screen.blit(BananaImages [currentBananaImage], bananaPosition);
 
     currentBananaImageSpeed += 1;
 
 
-    if (currentBananaImageSpeed > 2):
+    #draw Banana, currentBananaImageSpeed controls how fast it goes
+    if (currentBananaImageSpeed > 4):
         currentBananaImageSpeed = 0;
 
         currentBananaImage += 1;
         if (currentBananaImage > len (BananaImages) - 1):
             currentBananaImage = 0;
 
+    if (not bananaApproached and isPersonCloseToBanana ()):
+        bananaApproached = True;      
+        globals.direction="stand";  
 
-    print ("DDDDDDDDDD", currentBananaImage)
-    
-
-
+    #check if bubble needs to be drawn
+    if (bananaApproached):
+        
+        #draw bubble
+        globals.screen.blit (bubbleImage, bananaBubblePosition);
+        
+        #draw current question
+        
 
 #room description
 roomData = {

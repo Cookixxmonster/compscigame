@@ -6,7 +6,7 @@ Created on Jun 1, 2015
 
 import pygame;
 
-currentXPos = 550;
+currentXPos = 50;
 currentYPos = 540;
 direction='none'
 
@@ -33,6 +33,6 @@ screenHeight=700;
 #doors
 doorWidth=50;
 
-defaultSpeed=3;
+defaultSpeed=5;
 
 screen=0
