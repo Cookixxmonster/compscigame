@@ -97,7 +97,6 @@ def roomLogicFunction (object, roomObject) :
             pos = object.pos;
             x = pos[0];
             y = pos [1];
-            print ("DDDDDDDDDD:", pos)
 
             if (x > 525 and x < 525 + 50 and y > 400 and y < 400 + 50):
                 openDoor ();

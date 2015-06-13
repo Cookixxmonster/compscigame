@@ -50,10 +50,6 @@ def roomLogicFunction (object, roomObject) :
             currentchestImage += 1;
 
 
-    print ("DDDDDDDDDD", currentchestImage)
-
-
-
 #room description
 roomData = {
     'name':"Room with chest of memories",

@@ -53,8 +53,6 @@ def roomLogicFunction (object, roomObject) :
                 roomData ['objects'][12]['text']=''; 
  
 
-            print ("AAA:" + randomString)
-            
             roomData ['objects'][9]['text']= "YOU'VE ENTERED:" + clickedMirrors;
 
     except:
