@@ -54,6 +54,7 @@ roomData = {
     'name':"Happy World",
     'backgroundColor': (0, 155, 225),
     'backgroundImage' : 'images/a-happy-place-sunrise.png',
+    'speed': 8,
     'roomLogic':roomLogicFunction,
     'objects':[
                {

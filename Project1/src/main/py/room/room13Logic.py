@@ -54,6 +54,7 @@ def roomLogicFunction (object, roomObject) :
 roomData = {
     'name':"Room with chest of memories",
     'backgroundColor': (0, 155, 225),
+    'speed': 8,
     'roomLogic':roomLogicFunction,
     'objects':[
                {

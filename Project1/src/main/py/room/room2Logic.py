@@ -18,6 +18,7 @@ roomData = {
     'name':"Go into Machine",
     'backgroundColor': (255, 255, 255),
     'roomLogic':roomLogicFunction,
+    'speed': 8,
     'objects':[
                #define borders
                {

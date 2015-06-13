@@ -19,7 +19,7 @@ roomData = {
     'backgroundColor': (0, 155, 225),
     'backgroundImage' : 'images/Hallway2.jpg',
     'roomLogic':roomLogicFunction,
-    'speed':5,
+    'speed':8,
     'objects':[
                {
                 'name':'door',

@@ -5,6 +5,7 @@ Created on Jun 3, 2015
 '''
 
 from globals import globals
+import pygame
 
 '''
 Logic pertaining to various events in room5
@@ -17,6 +18,8 @@ def roomLogicFunction (object, roomObject) :
 roomData = {
     'name':"Anger World",
     'backgroundColor': (0, 155, 225),
+    'backgroundImage' : 'images/angry background.png',
+    'speed': 8,
     'roomLogic':roomLogicFunction,
     'objects':[
                {
@@ -34,6 +37,12 @@ roomData = {
                 'backgroundColor':(0, 255, 100),
                 'toRoom':5,
                 'exitTo':'right'
-               }
+               },
+               {
+                'name':'anger',
+                'data' : pygame.image.load('images/anger1.png'),
+                'dimension' : (450, globals.screenHeight-310, 0, 0),
+                'shape':'image'
+                }
     ]
 }

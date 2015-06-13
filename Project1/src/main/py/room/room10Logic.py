@@ -18,6 +18,7 @@ roomData = {
     'name':"Greed",
     'backgroundColor': (0, 155, 225),
     'backgroundImage' : 'images/Greed.jpg',
+    'speed': 8,
     'roomLogic':roomLogicFunction,
     'objects':[
 

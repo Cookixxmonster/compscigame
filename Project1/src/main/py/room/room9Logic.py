@@ -79,6 +79,7 @@ roomData = {
     'name':"",
     'backgroundColor': (0, 155, 225),
     'backgroundImage' : 'images/Pride.jpg',
+    'speed': 8,
     'startX':400,
     'startY':550,
     'startMovement':'stand',

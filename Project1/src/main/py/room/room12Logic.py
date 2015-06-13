@@ -314,6 +314,7 @@ roomData = {
     'name':"Fight Room",
     'backgroundColor': (0, 155, 225),
     'backgroundImage' : 'images/Evil Room.png',
+    'speed': 8,
     'roomLogic':roomLogicFunction,
     'startX':400,
     'startY':500,
@@ -335,6 +336,6 @@ roomData = {
                 'shape':'label',
                 'color': (255,255,255),
                 'backgroundColor':(0, 0, 0)
-               },
+               }
     ]
 }
