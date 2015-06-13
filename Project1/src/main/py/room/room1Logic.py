@@ -24,6 +24,7 @@ roomData = {
     'name':"Intro",
     'backgroundColor': (169, 207, 235),
     'roomLogic':roomLogicFunction,
+    'speed': 8,
     'objects':[
                #define borders
                {

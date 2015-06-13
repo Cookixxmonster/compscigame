@@ -19,6 +19,7 @@ roomData = {
     'name':"Sad World",
     'backgroundColor': (0, 155, 225),
     'backgroundImage' : 'images/sad image.png',
+    'speed': 8,
     'roomLogic':roomLogicFunction,
     'objects':[
              {
@@ -40,7 +41,7 @@ roomData = {
                {
                 'name':'sadness',
                 'data' : pygame.image.load('images/Sadness.png'),
-                'dimension' : (-450, -200, 0, 0),
+                'dimension' : (-250, globals.screenHeight-550, 0, 0),
                 'shape':'image'
                 }
     ]

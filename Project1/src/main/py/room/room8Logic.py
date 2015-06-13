@@ -82,6 +82,7 @@ roomData = {
     'speed':6,
     'backgroundColor': (0, 155, 225),
     'backgroundImage' : 'images/Gluttony.jpg',
+    'speed': 8,
     'roomLogic':roomLogicFunction,
     'objects':[
 

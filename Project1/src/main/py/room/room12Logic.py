@@ -45,6 +45,7 @@ roomData = {
     'name':"Fight Room",
     'backgroundColor': (0, 155, 225),
     'backgroundImage' : 'images/Evil Room.png',
+    'speed': 8,
     'roomLogic':roomLogicFunction,
     'startX':400,
     'startY':500,
@@ -60,7 +61,7 @@ roomData = {
                },
                {
                 'name':'spider',
-                'data' : pygame.image.load('images/Spider.png'),
+                'data' : pygame.image.load('images/Spider1.png'),
                 'dimension' : (-450, -200, 0, 0),
                 'shape':'image',
                 'startX': 950,

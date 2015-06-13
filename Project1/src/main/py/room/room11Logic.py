@@ -109,6 +109,7 @@ roomData = {
     'name':"",
     'backgroundColor': (0, 155, 225),
     'backgroundImage' : 'images/Lust.jpg',
+    'speed': 8,
     'roomLogic':roomLogicFunction,
     'objects':[
                #define borders
@@ -138,7 +139,7 @@ roomData = {
                },
                {
                 'name':'key image',
-                'dimension' : (525, 400, 50, 50),
+                'dimension' : (580, 390, 50, 50),
                 'shape':'image',
                 'data':pygame.image.load('images/room11/key.png')
                },
