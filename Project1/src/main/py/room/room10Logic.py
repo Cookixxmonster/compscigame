@@ -32,7 +32,7 @@ roomData = {
                },
                {
                 'name':'leftwall',
-                'dimension' : (-2, 0, 2, globals.screenHeight),
+                'dimension' : (5, 0, 2, globals.screenHeight),
                 'shape':'rect',
                 'backgroundColor':(255, 0, 0)
                },

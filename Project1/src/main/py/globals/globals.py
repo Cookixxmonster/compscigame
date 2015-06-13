@@ -11,13 +11,19 @@ currentYPos = 540;
 direction='none'
 
 #colors
-red = (255,0,0)
-green = (0,255,0)
-blue = (0,0,255)
-darkBlue = (0,0,128)
-white = (255,255,255)
-black = (0,0,0)
-pink = (255,200,200)
+RED = (255,0,0)
+GREEN = (0,255,0)
+BLUE = (0,0,255)
+DARKBLUE = (0,0,128)
+WHITE = (255,255,255)
+BLACK = (0,0,0)
+PINK = (255,200,200)
+GREEN = (0, 255, 0)
+GREY = (123, 121, 148)
+BROWN = (130, 92, 10)
+CREAM = (240,210,170)
+YELLOW = (240,234,55)
+PURPLE = (181, 128, 217)
 
 #room
 currentRoom = 0;
