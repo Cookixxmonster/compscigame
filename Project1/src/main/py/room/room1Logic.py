@@ -54,11 +54,11 @@ roomData = {
 
                {
                 'name':'door',
-                'dimension' : (700, 0, 140, 25),
+                'dimension' : (650, 0, 140, 25),
                 'shape':'rect',
                 'backgroundColor':(0, 255, 100),
                 'toRoom':1,
-                'exitTo':'down'
+                'exitTo':'up'
                },
                {
                 'name':'bed',
@@ -87,25 +87,25 @@ roomData = {
                 },
                {
                 'name':'table',
-                'dimension' : (50, 25, 150, 125),
+                'dimension' : (30, 25, 150, 125),
                 'shape':'rect',
                 'backgroundColor':(130, 92, 10),
                 },
                {
                 'name':'paper',
-                'dimension' : (87.5, 56.25, 75, 62.5),
+                'dimension' : (67.5, 56.25, 75, 62.5),
                 'shape':'rect',
                 'backgroundColor':(255,255,255),
                 },
                {
                 'name':'chair',
-                'dimension' : (85, 160, 75, 50),
+                'dimension' : (65, 160, 75, 50),
                 'shape':'rect',
                 'backgroundColor':(130, 92, 10),
                 },
                {
                 'name':'chair',
-                'dimension' : (85, 160, 75, 50),
+                'dimension' : (65, 160, 75, 50),
                 'shape':'rect',
                 'backgroundColor':(130, 92, 10),
                 },

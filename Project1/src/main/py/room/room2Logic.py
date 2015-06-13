@@ -17,6 +17,7 @@ def roomLogicFunction (object, roomObject) :
 roomData = {
     'name':"Go into Machine",
     'backgroundColor': (255, 255, 255),
+    'backgroundImage' : 'images/Second Room.jpg',
     'roomLogic':roomLogicFunction,
     'speed': 8,
     'objects':[
@@ -45,18 +46,11 @@ roomData = {
                 'shape':'rect',
                 'backgroundColor':(0, 0, 0)
                },
+              
                {
                 'name':'door',
-                'dimension' : (0, globals.screenHeight-150, 50, 150),
-                'shape':'rect',
-                'backgroundColor':(0, 255, 100),
-                'toRoom':0,
-                'exitTo':'left'
-               },
-               {
-                'name':'door',
-                'dimension' : (globals.screenWidth-50, globals.screenHeight - 150, 50, 150),
-                'shape':'rect',
+                'dimension' : (globals.screenWidth-150, globals.screenHeight - 500, 100, 250),
+                'shape':'machinedoor',
                 'backgroundColor':(0, 255, 100),
                 'toRoom':2,
                 'exitTo':'right'

@@ -10,6 +10,7 @@ import pygame;
 
 currentBananaImage = 0;
 currentBananaImageSpeed = 0;
+banana_approached = 
 
 
 BananaImages = [
@@ -46,6 +47,7 @@ def roomLogicFunction (object, roomObject) :
 
 
     print ("DDDDDDDDDD", currentBananaImage)
+    
 
 
 
@@ -97,5 +99,7 @@ roomData = {
                 'shape':'rect',
                 'backgroundColor':(0, 0, 0)
                }
+               
+               
     ]
 }

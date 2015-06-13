@@ -48,6 +48,8 @@ def roomLogicFunction (object, roomObject) :
 
         if (currentchestImage < len (chestImages) - 1):
             currentchestImage += 1;
+            
+
 
 
 #room description

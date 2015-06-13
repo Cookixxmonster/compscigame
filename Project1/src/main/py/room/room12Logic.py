@@ -8,7 +8,7 @@ from globals import globals
 import pygame
 
 SpiderImage = [
-    pygame.image.load('images/room12/spider.png'),
+    pygame.image.load('images/room12/spider1.png'),
     
 ]
     
