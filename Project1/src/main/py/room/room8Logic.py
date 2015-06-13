@@ -11,13 +11,28 @@ from globals import globals
 
 trivia=[
         {
-         'question':'How old am I?',
-         'answer':'1234',
+         'question':'What does KFC stand for?',
+         'answer':'Kentucky Fried Chicken',
          'input':''
          },
         {
-         'question':'How old am I 111?',
-         'answer':'12343434',
+         'question':'What chain is the Big Mac sold at?',
+         'answer':'Mcdonalds',
+         'input':''
+         },
+         {
+         'question':'What is the Tim Hortons jingle??',
+         'answer':'Always Fresh, Always Tim Hortons',
+         'input':''
+         },
+         {
+         'question':'What chain does 737-1111 belong to?',
+         'answer':'Pizza Pizza',
+         'input':''
+         },
+         {
+         'question':'Which restaurant has lips as their mascot?',
+         'answer':'Dairy Queen',
          'input':''
          }
 ];
@@ -26,7 +41,7 @@ currentTrivia=0;
 currentInput=''
 
 #need to answer 2 questions to exit
-passingScore = 2;
+passingScore = 3;
 
 '''
 Logic pertaining to various events in room8
@@ -123,8 +138,8 @@ roomData = {
                {
                 'name':'triviaQuestion',
                 'text' : trivia [currentTrivia]['question'],
-                'size':36,
-                'dimension' : (300, 50, 0, 0),
+                'size':25,
+                'dimension' : (100, 50, 300, 0),
                 'shape':'label',
                 'color': (255,0 , 0),
                 'backgroundColor':(0, 0, 0)
@@ -132,7 +147,7 @@ roomData = {
                {
                 'name':'triviaInput',
                 'text' : currentInput,
-                'size':36,
+                'size':30,
                 'dimension' : (100, 150, 0, 0),
                 'shape':'label',
                 'color': (255, 255 , 255),
