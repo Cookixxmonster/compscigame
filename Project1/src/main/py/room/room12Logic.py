@@ -131,7 +131,7 @@ def checkIfAnySpiderIsKilled ():
     global spiderClicks, message;
     
     for i in range (0, 4):
-        if (spiderClicks [i] > 250 and not isSpiderKilled (i)):
+        if (spiderClicks [i] > 15 and not isSpiderKilled (i)):
             markSpiderKilled (i);
             message="You killed spider #" + str (i + 1) + ". It hurt ...";   
     
@@ -335,6 +335,30 @@ roomData = {
                 'dimension' : (20, 15, 0, 0),
                 'shape':'label',
                 'color': (255,255,255),
+                'backgroundColor':(0, 0, 0)
+               },
+               {
+                'name':'leftwall',
+                'dimension' : (-2, 0, 2, globals.screenHeight),
+                'shape':'rect',
+                'backgroundColor':(255, 0, 0)
+               },
+               {
+                'name':'rightwall',
+                'dimension' : (globals.screenWidth, 0, 2, globals.screenHeight),
+                'shape':'rect',
+                'backgroundColor':(0, 255, 0)
+               },
+               {
+                'name':'topwall',
+                'dimension' : (0, 0, globals.screenWidth, 2),
+                'shape':'rect',
+                'backgroundColor':(0, 0, 255)
+               },
+               {
+                'name':'bottomwall',
+                'dimension' : (0, globals.screenHeight-2, globals.screenWidth, globals.screenHeight),
+                'shape':'rect',
                 'backgroundColor':(0, 0, 0)
                }
     ]
