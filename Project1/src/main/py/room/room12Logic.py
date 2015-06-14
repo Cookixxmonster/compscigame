@@ -26,7 +26,7 @@ spider1Direction="right";
 spider2Direction="left";
 spider3Direction="right";
 spider4Direction="left";
-message="Welcome, strangest. Scared of little spiders?";
+message="You are now in the chamber of fears.Click the spiders to kill them as fast as you can";
 
 died=False;
 diedCycles=0;
@@ -57,7 +57,7 @@ def init ():
     spider2Direction="left";
     spider3Direction="right";
     spider4Direction="left";
-    message="Welcome, strangest. Scared of little spiders?";
+    message="You are now in the chamber of fears. Click the spiders to kill them as fast as you can";
     
     died=False;
     diedCycles=0;
@@ -73,7 +73,7 @@ check if any spider is clicked
 def spiderClicked (x, y):        
 
     for i in range (0, 4):
-        rect = pygame.Rect (spiderCoordinates [i]['x'], spiderCoordinates [i]['y'], 150, 150);
+        rect = pygame.Rect (spiderCoordinates [i]['x'], spiderCoordinates [i]['y'], 200, 200);
         if (rect.collidepoint (x, y)):
             return i;
         
@@ -130,7 +130,7 @@ def checkIfAnySpiderIsKilled ():
     global spiderClicks, message;
     
     for i in range (0, 4):
-        if (spiderClicks [i] > 15 and not isSpiderKilled (i)):
+        if (spiderClicks [i] > 1 and not isSpiderKilled (i)):
             markSpiderKilled (i);
             message="You killed spider #" + str (i + 1) + ". It hurt ...";   
     
@@ -169,7 +169,7 @@ def roomLogicFunction (object, roomObject) :
     
     currentSpiderImageSpeed += 1;
 
-    if (currentSpiderImageSpeed > 1):
+    if (currentSpiderImageSpeed > 15):
         currentSpiderImageSpeed = 0;
 
         #each spider has its own moving function so 4 calls

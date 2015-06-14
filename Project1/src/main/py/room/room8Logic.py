@@ -40,7 +40,7 @@ trivia=[
 currentTrivia=0;
 currentInput=''
 
-#need to answer 2 questions to exit
+#need to answer 3 questions to exit
 passingScore = 3;
 
 '''

@@ -98,7 +98,7 @@ def roomLogicFunction (object, roomObject) :
             x = pos[0];
             y = pos [1];
 
-            if (x > 525 and x < 525 + 50 and y > 400 and y < 400 + 50):
+            if (x > 50 and x < 50 + 50 and y > 670 and y < 670 + 50):
                 openDoor ();
     except:
         pass;
@@ -138,7 +138,7 @@ roomData = {
                },
                {
                 'name':'key image',
-                'dimension' : (580, 390, 50, 50),
+                'dimension' : (50, 670, 50, 50),
                 'shape':'image',
                 'data':pygame.image.load('images/room11/key.png')
                },

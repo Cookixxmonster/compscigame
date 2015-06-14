@@ -12,6 +12,56 @@ Logic pertaining to various events in room5
 '''
 def roomLogicFunction (object, roomObject) :
     return 0;
+angerApproached = False; 
+
+bubbleImage=pygame.image.load('images/room3/Textbubble.png');
+angerPosition = (450,350);
+angerBubblePosition = (400,300);
+angerMessages=["Would you like some grits?"];
+angerCurrentMessage = 0;
+
+
+def isPersonCloseToanger ():
+    
+    global angerPosition;
+    
+    x = globals.currentXPos;
+    y =  globals.currentYPos;
+    
+    #that's where the anger is
+    rect = pygame.Rect (angerPosition [0], angerPosition [1], 350, 350);
+    
+    #check each point in the square when the walking man is
+    for i in range (x, x + 100):
+        for j in range (y, y + 100):
+            if (rect.collidepoint (i, j)):
+                return True;
+
+
+'''
+Logic pertaining to various events in room4
+'''
+def roomLogicFunction (object, roomObject) :
+    
+    
+                
+    global angerApproached, bubbleImage, angerPosition;
+    global angerMessages, angerCurrentMessage;
+    global roomData;
+    
+    
+    if (not angerApproached and isPersonCloseToanger ()):
+        angerApproached = True;      
+        globals.direction="stand";
+        
+    #check if bubble needs to be drawn
+    if (angerApproached):
+            
+        #draw bubble
+        globals.screen.blit (bubbleImage, angerBubblePosition);
+            
+        #draw current question
+        globals.drawLabel(angerBubblePosition [0] + 15, angerBubblePosition [1] + 15, angerMessages [angerCurrentMessage])
 
 
 #room description

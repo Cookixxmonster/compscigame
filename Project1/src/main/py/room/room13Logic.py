@@ -38,12 +38,12 @@ def roomLogicFunction (object, roomObject) :
     #draw chest
     global chest, currentchestImageDelta, currentchestImage;
 
-    globals.screen.blit(chestImages [currentchestImage],(450,150));
+    globals.screen.blit(chestImages [currentchestImage],(250,150));
 
     currentchestImageDelta += 1;
 
 
-    if (currentchestImageDelta > 15):
+    if (currentchestImageDelta > 7):
         currentchestImageDelta = 0;
 
         if (currentchestImage < len (chestImages) - 1):
@@ -56,6 +56,7 @@ def roomLogicFunction (object, roomObject) :
 roomData = {
     'name':"Room with chest of memories",
     'backgroundColor': (0, 155, 225),
+    'backgroundImage' : 'images/Memoryroom.jpg',
     'speed': 8,
     'roomLogic':roomLogicFunction,
     'objects':[

@@ -7,11 +7,59 @@ Created on Jun 3, 2015
 from globals import globals
 import pygame
 
+sadnessApproached = False; 
+
+bubbleImage=pygame.image.load('images/room3/Textbubble.png');
+sadnessPosition = (450,350);
+sadnessBubblePosition = (400,300);
+sadnessMessages=["Would you like some grits?"];
+sadnessCurrentMessage = 0;
+
+
+def isPersonCloseToSadness ():
+    
+    global sadnessPosition;
+    
+    x = globals.currentXPos;
+    y =  globals.currentYPos;
+    
+    #that's where the sadness is
+    rect = pygame.Rect (sadnessPosition [0], sadnessPosition [1], 350, 350);
+    
+    #check each point in the square when the walking man is
+    for i in range (x, x + 100):
+        for j in range (y, y + 100):
+            if (rect.collidepoint (i, j)):
+                return True;
+
+
 '''
 Logic pertaining to various events in room4
 '''
 def roomLogicFunction (object, roomObject) :
-    return 0;
+    
+    
+                
+    global sadnessApproached, bubbleImage, sadnessPosition;
+    global sadnessMessages, sadnessCurrentMessage;
+    global roomData;
+    
+    
+    if (not sadnessApproached and isPersonCloseToSadness ()):
+        sadnessApproached = True;      
+        globals.direction="stand";
+        
+    #check if bubble needs to be drawn
+    if (sadnessApproached):
+            
+        #draw bubble
+        globals.screen.blit (bubbleImage, sadnessBubblePosition);
+            
+        #draw current question
+        globals.drawLabel(sadnessBubblePosition [0] + 15, sadnessBubblePosition [1] + 15, sadnessMessages [sadnessCurrentMessage])
+
+
+
 
 
 #room description
@@ -41,7 +89,7 @@ roomData = {
                {
                 'name':'sadness',
                 'data' : pygame.image.load('images/Sadness.png'),
-                'dimension' : (-250, globals.screenHeight-550, 0, 0),
+                'dimension' : (450,350, 0, 0),
                 'shape':'image'
                 },
                {
