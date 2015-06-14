@@ -67,12 +67,13 @@ def roomLogicFunction (object, roomObject) :
 
 
     #draw Banana, currentBananaImageSpeed controls how fast it goes
-    if (currentBananaImageSpeed > 4):
-        currentBananaImageSpeed = 0;
-
-        currentBananaImage += 1;
-        if (currentBananaImage > len (BananaImages) - 1):
-            currentBananaImage = 0;
+    if (not bananaApproached):
+        if (currentBananaImageSpeed > 4):
+            currentBananaImageSpeed = 0;
+    
+            currentBananaImage += 1;
+            if (currentBananaImage > len (BananaImages) - 1):
+                currentBananaImage = 0;
 
     if (not bananaApproached and isPersonCloseToBanana ()):
         bananaApproached = True;      
