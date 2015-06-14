@@ -36,3 +36,13 @@ doorWidth=50;
 defaultSpeed=5;
 
 screen=0
+
+
+
+
+def drawLabel (x, y, label, fontSize=10, color=(0, 0, 0)):
+    global screen;
+    
+    font=pygame.font.SysFont("monospace", fontSize, 700);
+    label = font.render(label, fontSize, color)
+    screen.blit(label, (x, y))

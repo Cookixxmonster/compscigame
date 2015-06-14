@@ -15,7 +15,6 @@ bananaApproached = False;
 bubbleImage=pygame.image.load('images/room3/Textbubble.png');
 bananaPosition = (450,350);
 bananaBubblePosition = (550,300);
-bananaBananaMessagePosition = (550,300);
 bananaBananaMessages=["Would you like some grits?"];
 bananaBananaCurrentMessage = 0;
 
@@ -59,7 +58,8 @@ def roomLogicFunction (object, roomObject) :
 
     global currentBananaImageSpeed, currentBananaImage;
     global bananaApproached, bubbleImage, bananaPosition;
-    global bananaBananaMessagePosition, bananaBananaMessages, bananaBananaCurrentMessage
+    global bananaBananaMessages, bananaBananaCurrentMessage;
+    global roomData;
 
     globals.screen.blit(BananaImages [currentBananaImage], bananaPosition);
 
@@ -85,7 +85,7 @@ def roomLogicFunction (object, roomObject) :
         globals.screen.blit (bubbleImage, bananaBubblePosition);
         
         #draw current question
-        
+        globals.drawLabel(bananaBubblePosition [0] + 15, bananaBubblePosition [1] + 15, bananaBananaMessages [bananaBananaCurrentMessage])
 
 #room description
 roomData = {
@@ -134,8 +134,7 @@ roomData = {
                 'dimension' : (0, globals.screenHeight-2, globals.screenWidth, globals.screenHeight),
                 'shape':'rect',
                 'backgroundColor':(0, 0, 0)
-               }
-               
+               }               
                
     ]
 }
