@@ -169,7 +169,7 @@ def roomLogicFunction (object, roomObject) :
     
     currentSpiderImageSpeed += 1;
 
-    if (currentSpiderImageSpeed > 15):
+    if (currentSpiderImageSpeed > 1):
         currentSpiderImageSpeed = 0;
 
         #each spider has its own moving function so 4 calls
