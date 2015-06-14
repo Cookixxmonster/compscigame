@@ -12,7 +12,7 @@ sadnessApproached = False;
 bubbleImage=pygame.image.load('images/room3/Textbubble.png');
 sadnessPosition = (450,350);
 sadnessBubblePosition = (400,300);
-sadnessMessages=["Would you like some grits?"];
+sadnessMessages=["Riddle Goes Here"];
 sadnessCurrentMessage = 0;
 
 

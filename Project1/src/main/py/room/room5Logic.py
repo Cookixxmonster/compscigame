@@ -17,7 +17,7 @@ angerApproached = False;
 bubbleImage=pygame.image.load('images/room3/Textbubble.png');
 angerPosition = (450,350);
 angerBubblePosition = (400,300);
-angerMessages=["Would you like some grits?"];
+angerMessages=["Riddle Goes here"];
 angerCurrentMessage = 0;
 
 

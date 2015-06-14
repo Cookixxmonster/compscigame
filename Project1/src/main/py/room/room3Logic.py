@@ -15,7 +15,7 @@ bananaApproached = False;
 bubbleImage=pygame.image.load('images/room3/Textbubble.png');
 bananaPosition = (450,350);
 bananaBubblePosition = (400,300);
-bananaBananaMessages=["Would you like some grits?"];
+bananaBananaMessages=["Riddle Goes Here"];
 bananaBananaCurrentMessage = 0;
 
 BananaImages = [
